@@ -17,7 +17,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0px 15px;
+    padding: 0px 45px;
     box-sizing: content-box;
 }
 
@@ -31,6 +31,11 @@ body {
 .header__container {
     display: flex;
     justify-content: space-between;
+}
+
+.header_left {
+    width: 50%;
+    padding-right: 20px;
 }
 
 .header_left_top {
@@ -221,11 +226,21 @@ body {
     color: #f8f8f8;
 }
 
+.header_right {
+    width: 50%;
+}
+
 .header_right_image {
-    width: 672px;
-    height: 960px;
+    max-width: 672px;
+    max-height: 960px;
     position: relative;
     margin-top: -70px;
+    z-index: -1;
+}
+
+.header_right_image img {
+    max-width: 672px;
+    max-height: 960px;
 }
 
 .header_right_button {
@@ -257,6 +272,68 @@ body {
 
 .header_right_button a:hover {
     color: #fbbdfa;
+}
+
+@media (max-width: 1150px) {
+    .header_right_image img {
+        position: absolute;
+        right: -50px;
+    }
+    .header_right_image img {
+        max-width: 450px;
+    }
+    .header_left_bottom_block {
+        margin-top: 70px;
+        max-width: 450px;
+    }
+    .header_left_bottom_block_title {
+        font-size: 50px;
+        line-height: 78px;
+        margin-bottom: 40px;
+    }
+    .header_right_button {
+        width: 201px;
+        height: 56px;
+        position: absolute;
+        top: 65px;
+        right: -20px;
+    }
+    .header_left {
+        width: 100%;
+    }
+    .header_right {
+        width: 0px;
+    }
+}
+
+@media (max-width: 1030px) {
+    .header_right_image img {
+        max-width: 350px;
+    }
+    .header_left_bottom_block {
+        margin-top: 40px;
+        max-width: 450px;
+    }
+    .header_left_bottom_block_title {
+        font-size: 36px;
+        line-height: 68px;
+        margin-bottom: 35px;
+    }
+    .header_left_bottom_block_text {
+        margin-bottom: 35px;
+        font-size: 20px;
+        line-height: 31px;
+    }
+    .button_style {
+        width: 163px;
+        height: 56px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .header_left_bottom_block_button_right {
+        height: 56px;
+        width: 163px;
+    }
 }
 
 
@@ -315,6 +392,27 @@ body {
 
 .main_one_block_right_button {
     margin-top: 55px;
+}
+
+@media (max-width: 1150px) {
+    .main_one_block_left_image img {
+        max-width: 400px;
+    }
+    .title_all {
+        font-size: 35px;
+    }
+    .main_one_block_right {
+        max-width: 500px;
+    }
+    .main_one_block_right_item {
+        margin-top: 30px;
+    }
+    .main_one_block_right_item_all {
+        margin-bottom: 35px;
+    }
+    .main_one_block_right_item_all p {
+        font-size: 22px;
+    }
 }
 
 
