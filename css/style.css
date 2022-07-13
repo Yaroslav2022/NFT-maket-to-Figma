@@ -7,6 +7,10 @@ body {
     height: 100%;
 }
 
+.look {
+    overflow: hidden;
+}
+
 .wrapper {
     min-height: 100%;
     overflow: hidden;
@@ -44,6 +48,11 @@ body {
 
 .header_left_top_logo {
     margin-right: 60px;
+}
+
+.header_left_top_logo img {
+    position: relative;
+    z-index: 3;
 }
 
 .header_left_top_logo:hover {
@@ -345,7 +354,7 @@ body {
         margin-top: 100px;
     }
     .header_right_image img {
-        max-width: 300px;
+        max-width: 250px;
         margin-right: 45px;
     }
     .header_left_bottom_block_text {
@@ -399,7 +408,103 @@ body {
     }
 }
 
-@media (max-width: 700px) {}
+.header_menu_icon {
+    display: none;
+}
+
+
+/* ===============================menu_BURGER=============================== */
+
+@media (max-width: 767px) {
+    .header {
+        margin-top: 50px;
+    }
+    .header_menu_icon {
+        z-index: 5;
+        margin-top: 20px;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        left: -30px;
+    }
+    .header_menu_icon span,
+    .header_menu_icon::before,
+    .header_menu_icon::after {
+        left: -20;
+        position: absolute;
+        height: 5%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #fff;
+    }
+    .header_menu_icon::before,
+    .header_menu_icon::after {
+        content: "";
+    }
+    .header_menu_icon::before {
+        top: 0;
+    }
+    .header_menu_icon::after {
+        bottom: 0;
+    }
+    .header_menu_icon span {
+        top: 50%;
+        transform: scale(1) translate(0px, -10%);
+    }
+    .header_menu_icon.active span {
+        transform: scale(0) translate(0px, -10%);
+    }
+    .header_menu_icon.active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .header_menu_icon.active::after {
+        top: 50%;
+        transform: rotate(45deg) translate(0px, -50%);
+    }
+    .header_right_button {
+        display: none;
+    }
+    .header_right_image {
+        margin-top: 60px;
+    }
+    .header_left_top_menu ul {
+        flex-direction: column;
+    }
+    .header_left_top_menu {
+        height: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        top: 0;
+        left: -110%;
+        width: 100%;
+        padding: 80px 20px 40px;
+        background-color: rgba(32, 25, 31, 0.905);
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+        z-index: 2;
+    }
+    .header_left_top_menu ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .header_left_top_menu ul li {
+        margin: 0px 0px 30px;
+        padding: 0;
+    }
+    .header_left_top_menu ul li a {
+        font-size: 20px;
+    }
+    .active {
+        left: -20px;
+    }
+}
 
 
 /* =======================MAIN========================= */
@@ -564,6 +669,11 @@ body {
         height: 40px;
         font-size: 15px;
     }
+    .header_left_bottom_block_button_right {
+        width: 130px;
+        height: 40px;
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 830px) {
@@ -573,6 +683,9 @@ body {
 }
 
 @media (max-width: 800px) {
+    .main_one_block {
+        margin-top: 40px;
+    }
     .main_one_block_left_image {
         height: 100%;
         display: flex;
@@ -849,6 +962,10 @@ body {
 
 /* =======================MAIN(SEVEN_BLOCK)========================= */
 
+.mine_seven_block {
+    margin-top: 40px;
+}
+
 .mine_seven_block_title {
     text-align: center;
 }
@@ -862,6 +979,39 @@ body {
 .main_seven_block_right_item {
     margin-top: 70px;
     margin-bottom: 100px;
+}
+
+@media (max-width: 1050px) {
+    .mine_seven_block {
+        margin-top: 0;
+    }
+    .mine_seven_block_wrapper {
+        margin-top: 70px;
+    }
+    .main_seven_block_right_item {
+        margin: 60px 0px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .mine_seven_block_wrapper {
+        margin-top: 50px;
+    }
+    .main_seven_block_right_item {
+        margin: 40px 0px;
+    }
+}
+
+@media(max-width: 900px) {
+    .main_seven_block_right_item {
+        width: 500px;
+    }
+    .mine_seven_block_wrapper {
+        margin-top: 30px;
+    }
+    .main_seven_block_right_item {
+        margin: 30px 0px;
+    }
 }
 
 
